@@ -17,10 +17,6 @@
 
     <input type="number" id="column">
     <p>  <button onclick="myFunction()">Click here when ready!</button></p>
-  
-
-
-
     <table id="mltplytbl"></table>
 
     <script>
@@ -32,19 +28,20 @@
             var row = parseInt(document.getElementById("row").value);
             var column = parseInt(document.getElementById("column").value);
             var table = document.getElementById("mltplytbl");
+            
             if (row < 2 || row > 10 || column < 2 || column > 10) {
                 alert("Please enter numbers between 2 and 10");
                 return;
             }
+            
             table.innerHTML = '';
+            
             for ( x = 1; x <= row; x++) {
                 rows = table.insertRow();
-                for (y = 1; y <= column; y++) {
-                    rowws = rows.insertCell();
-                    rowws.innerText = x * y;
-                }
-            }
-        }
+            for (y = 1; y <= column; y++) {
+                rowws = rows.insertCell();
+                rowws.innerText = x * y;
+                }}}
     </script>
 
 </body>
